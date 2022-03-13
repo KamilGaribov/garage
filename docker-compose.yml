@@ -4,15 +4,11 @@ services:
         container_name: garage-back
         build: ./backend
         command: npm start
-        volumes:
-            - .:/code
         ports:
             - "5000:5000"
     frontend:
         container_name: garage-front
         build: ./frontend
-        command: npm start
-        volumes:
-            - .:/usr/src
+        command: npm run build
         ports:
             - "3001:3001"
