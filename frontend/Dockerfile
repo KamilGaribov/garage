@@ -5,4 +5,4 @@ COPY . /usr/src
 RUN npm install -g --save npm@latest
 RUN npm i -g react-scripts
 RUN npm install -g serve
-EXPOSE 3001
+EXPOSE 3000

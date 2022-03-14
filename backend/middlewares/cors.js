@@ -1,9 +1,9 @@
 const { CORS_ORIGIN_ALLOW_ALL, CORS_ORIGIN_WHITELIST } = require("../config");
 
 module.exports = (req, res, next) => {
-    const host = req.headers.host;
     if (CORS_ORIGIN_ALLOW_ALL) return next();
-    if (CORS_ORIGIN_WHITELIST.includes(host)) return next();
+    const origin = req.get("origin");
+    if (CORS_ORIGIN_WHITELIST.includes(origin)) return next();
     else
         return next({
             statusCode: 401,
