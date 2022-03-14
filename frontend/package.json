@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PORT=3001 react-scripts build && serve -s build -l 3001",
+    "build": "PORT=3000 react-scripts build && serve -s build -l 3000",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
